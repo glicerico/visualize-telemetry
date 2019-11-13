@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		"spine4"
+	],
+	"featureModel":"DataPlane",
+	"featureList": [
+		"active-routes-count",
+		"as",
+		"backup-routes-count",
+		"deleted-routes-count",
+		"paths-count",
+		"protocol-route-memory",
+		"routes-counts",
+		"global__established-neighbors-count-total",
+		"global__neighbors-count-total",
+		"global__nexthop-count",
+		"global__restart-count",
+		"performance-statistics__global__configuration-items-processed",
+		"performance-statistics__global__ipv4rib-server__rib-connection-up-count",
+		"performance-statistics__vrf__inbound-update-messages",
+		"vrf__neighbors-count",
+		"vrf__network-count",
+		"vrf__path-count",
+		"vrf__update-messages-received"
+	],
+	"dataset":{
+		"availableDataset": [
+			"bgpclear_first",
+			"bgpclear_second",
+			"portflap_first",
+			"bgpclear_apptraffic_2hourRun",
+			"bgpclear_no_traffic_2hourRun",
+			"bgpclearNewNet"
+		],
+		"list":[
+			"bgpclear_first"
+		],
+		"path": "Data/DatasetByNodes/"
+	}
+}
