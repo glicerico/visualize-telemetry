@@ -1,6 +1,7 @@
 {
 	"nodes":[
-		"leaf1"
+		"leaf1","leaf2","leaf3",
+		"spine1","spine2","spine3","spine4"
 	],
 	"featureModel":"DataPlane",
 	"featureList": [
