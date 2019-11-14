@@ -1,0 +1,120 @@
+
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\usepackage{float}
+
+\usepackage{blindtext} %for enumarations
+
+\usepackage[]{hyperref}  %link collor
+
+%talbe layout to the right
+%\usepackage[labelfont=bf]{caption}
+%\captionsetup[table]{labelsep=space,justification=raggedright,singlelinecheck=off}
+%\captionsetup[figure]{labelsep=quad}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+\setlength\parskip{4pt}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Shanghai Jiao Tong University} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge  Literature review for energy consumption in manufacturing industry from machine to factory level \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{  Wouter Vanoverberghe,Chang Yuan ...} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+%\nocite{*}
+\maketitle % Print the title
+
+\newpage
+\begin{abstract}
+
+{\noindent{\Large Abstract} }\\
+
+Energy consumption is one of the most critical issues in the manufacturing industry. The modeling, analysis and improvement of energy cost and consumption in multistage production system have been widely studied in many research works. To summarize the latest development of research of energy consumption, a large amount of research work have been investigated. The review work includes effect of design for the energy consumption and interactions between many aspects related to industry. This research research combines energy systems from microscopic to macroscopic, which includes machine, manufacturing line and factory level. 
+This document begins with a review of energy consumption on machine level. Including the schema for machine states and transition of energy, the process model for energy analysis and improvement methods. These topics are further discussed in detail for different processes, eg. forming process, additive processes, etc. In the next part of the review the researches on energy consumption for the multi-machine/manufacturing line level are introduced. Include the define of manufacturing line level, the logical benchmarking of manufacturing lines, and the utilization of energy flows. At last, the detailed way for the factory level energy management are studied. Including the factory energy management system and the method of reduce energy consumption.  \\
+
+
+\textbf{Key words:} review, Energy Efficiency, Manufacturing Processes, Machine Optimization, Sustainable manufacturing, Research activities
+    
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	Section 1
+%----------------------------------------------------------------------------------------
+
+\input{1-Section.tex}
+
+%----------------------------------------------------------------------------------------
+%	Section 2
+%----------------------------------------------------------------------------------------
+
+\input{2-Section.tex}
+
+
+\input{3-Section.tex}
+
+
+\input{4-Section.tex}
+
+
+\input{5-Section.tex}
+
+
+%bibliography
+\bibliographystyle{abbrv}
+\bibliography{sample.bib}
+
+\end{document}
