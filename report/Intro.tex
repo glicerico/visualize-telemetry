@@ -1,0 +1,44 @@
+
+
+
+%how to cite
+%\cite{Seow2011}
+
+%how to add figure
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.8\linewidth]{Figure/Total-consumption.jpg}
+% 	\caption{Total Consumption by End-Use Sector, 1949-2011 \cite{Apostolos2013}}
+% 	\label{fig:TotalConsumption}
+% \end{figure}
+
+
+
+\newpage
+\section{Introduction}
+
+The current project explores a method to predict anomalous events in the dynamics of a network, via finding their causes.
+The main idea in the method is to find the grammar of the network -- its implicit dynamical structure-- in an unsupervised manner, starting from telemetry data of its different components.
+If such a grammar can be obtained, then it would be possible to predict (with a certain confidence) an anomaly when observing dynamics that preceed such a state in the grammar.
+This would be similar to a situation in language processing where, after observing a sequence of words that form a sentence's subject (e.g. determiner-adjective-noun), we can expect a verb to follow.\\
+
+This project will leverage SingularityNet's Unsupervised Language Learning (ULL) pipeline, which attempts to find the grammar implicit in a given corpus of sentences.
+In order to process the network data with such pipeline, the process can be divided into three stages:
+\begin{enumerate}
+\item Abstract the network dynamics by converting the state of the network at each timestep into a real-valued vector (or a set of vectors).
+\item Using symbolic dynamics techniques, convert the dynamics of the network embedding vector(s) into a sequence of symbols; these sequences would be functionally equivalent to a natural language corpus in the ULL project.
+\item Apply a suitable version of the ULL pipeline to the sequences obtained in step 2 (the sentences), in order to learn the network grammar.
+\end{enumerate}
+
+The first step could be done in a number of ways.
+One popular and successful way to create distributed representations is using Neural Networks.
+Deep Neural Networks like graph2seq have been used to abstract graphs, with some success 
+\cite{venkatakrishnan_graph2seq_2018}.\\
+TESFA, YOU CAN ADD SOME STUFF HERE.
+
+Another approach for creating embeddings is to use the features as they come from the telemetry data.
+We follow a similar processing as done by \cite{putina_telemetry-based_2018}.
+
+For step 3, we need to adapt the ULL pipeline to our purposes: instead of having a natural language sentence where every word is presented to the algorithm at the same time, we would be dealing with a continous stream of tokens representing the state of the network at different times.
+In particular, the parser used in the ULL pipeline needs to be replaced by one that handles a continous stream of tokens.
+For this purpose, we implemented a continuous version of the MST-parser proposed by Yuret \cite{Yuret1999}\footnote{Code available at https://github.com/glicerico/stream-parser}

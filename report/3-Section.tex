@@ -1,0 +1,130 @@
+\newpage
+\section{Manufacturing line or multi-machine level}
+\label{chapter3}
+
+\textit{Person in Charge; Jin Chenghao and Huang Xinpei}
+
+%---------The scope of this chapter
+
+In this chapter,the researches on energy consumption on the multi-machine/manufacturing line level are introduced.Possible interactions and synergies between different machine tools are considered. Multi-machine ‘ecosystems’ can allow reuse of energy and material flows through proper planning and control.
+
+%---------Define manufacturing line level 
+
+A manufacturing line is a combination of different production processes and typically is composed of diverse machines for processing or transportation as well as personnel. All these production factors are being planned and controlled by a production management system. A multi-machine process boundaries are characterized through Figure \ref{fig:line-boundaries}. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Figure/line-boundaries.jpg}
+	\caption{System boundaries of a unit process }
+	\label{fig:line-boundaries}
+\end{figure}
+
+Majority of the energy management literature found in the manufacturing field is at the machine level and focuses on enhancing energy efficiency by selecting optimally either cutting conditions It was discovered that there can be an 80\% reduction in energy consumption if instead of leaving non-bottleneck machines idle, these machines are turned off until needed \cite{Gilles2007}. There have been research efforts that discovered that 85\% of energy in a manufacturing environment is utilized for functions not related to the production of parts \cite{Gutowski2005}. This suggests that with the development of integrated control efforts of system level operations there are many energy savings opportunities for the production line.There has been work into production scheduling that takes into account energy and environmental factors \cite{Fang2011}.There has been a work that proposes a modeling method of task-oriented energy consumption for machining manufacturing system. The energy consumption characteristics driven by task flow in machining manufacturing system are analyzed, which describes that energy consumption dynamically depends on the flexibility and variability of task flow in production processes\cite{He2012}.The Energy Blocks methodology for accurate energy consumption prediction is introduced,which is based on the representation of production operations as segments of specific energy consumption for each operating state of the production equipment and modelling any process chain is possible by arranging the segments according to the production programme\cite{Weinert2011}.There have been some researches on improving energy efficiency in Bernoulli serial lines like Figure \ref{fig:Bernoulli-serial-lines} and a mathematical way of reducing energy cost while maintaining desired production rate is introduced\cite{Wen2016}. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Figure/Bernoulli-serial-lines.jpg}
+	\caption{Bernoulli serial lines}
+	\label{fig:Bernoulli-serial-lines}
+\end{figure}
+
+There are also researches that use energy value stream mapping in analyzing the value-added vs. non-value-added energy use in machining cycles\cite{Muller2014}.The foundation for description, acquisition and analysis of all energetic flows into and out of a multi-machine ecosystem are the energy,exergy and entropy concepts.The energy only serves as a carrier of quality,and quality of energy or ’work potential’ can be described by the properties exergy and entropy\cite{Bejan2002}.
+
+\subsection{Process chain design and control}
+
+The energy consumptions are described by the energy to set up the machine and the additional energy used to process the product. That is to say. Energy is divided into two categories: the first one is related to energy required to start up the machine until it reaches ‘ready’ position, which is often fixed for a specific manufacturing process. After setting up a machine, additional requirement is proportional to its processing rate which falls into the second category.Let W$_i$ be the total electrical power consumed,W$_{o_{i}}$ represent the set-up power needed for the machine to reach ‘ready’ status, and k$_{i}p_{i}$ be the additional power, where k$_i$ is a constant, and p$_i$ describes the expected number of parts to be processed per unit of time, which is linearly characterized by the processing rate or capacity of machine i\cite{Wen2016}.
+
+Then we obtain 
+\begin{equation} \label{eq:3.1}
+\begin{split}
+W_{i}=W_{o_{i}}+k_{i}p_{i}
+\\
+\end{split}
+\end{equation}
+
+Then in a serial line with two machines, the system energy consumption within a cycle can be described as:
+\begin{equation} \label{eq:3.2}
+\begin{split}
+E=\sum_{i=1}^{2}W_{o_{i}}+\sum_{i=1}^{2}k_{i}p_{i}
+\\
+\end{split}
+\end{equation}
+
+In such a Bernoulli two-machine line, let PR define the system production rate (i.e. the average number of parts produced by the last machine per unit of time). Then PR can be obtained as follows:
+\begin{equation} \label{eq:3.3}
+\begin{split}
+PR=p_{2}[1-Q(p_{1},p_{2},N)]
+\\
+\end{split}
+\end{equation}
+
+Where,
+\begin{equation} \label{eq:3.4}
+\begin{split}
+Q(p_{1},p_{2},N)=\left\{\begin{matrix}
+\frac{(1-p_{1})[1-\alpha(p_{1},p_{2})]}{1-\frac{p_{1}}{p_{2}}\alpha ^{N}(p_{1},p_{2}))} ,if p_{1}\neq p_{2}
+\\ 
+\frac{1-p_{1}}{N+1-p_{1}}, if p_{1}=p_{2}
+\end{matrix}\right.
+\\
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq:3.5}
+\begin{split}
+\alpha(p_{1},p_{2})=\frac{p_{1}(1-p_{2})}{p_{2}(1-p_{1})}
+\end{split}
+\end{equation}
+
+There are two cases considered. One is with constrained workforce, i.e. limited due to capacity shortage or time restriction, while the other addresses the unconstrained case. To start, the constrained case is considered first, i.e. the workforce is limited so that optimal distribution is needed to minimize energy usage and achieve the desired production rate. Introduce workforce constraint p*=p$_1$p$_2$, then the problem is reformulated as follows:
+\begin{equation} \label{eq:3.6}
+\begin{split}
+Min:\sum_{i=1}^{2}W_{o_{i}}+\sum_{i=1}^{2}k_{i}p_{i}
+\\
+s.t.\left\{\begin{matrix}
+PR\geq PR_{d}\\ 
+p_{1}p_{2}=p*\\ 
+\quad 0<p_{1}<1 \quad 0<p_{2}<1
+\end{matrix}\right.
+\end{split}
+\end{equation}
+
+ Then we can draw a graph of PR-p$_{1}$ in Figure \ref{fig:PR-p1}.
+ \begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Figure/PR-p1.png}
+	\caption{PR-p1}
+	\label{fig:PR-p1}
+\end{figure}
+ 
+ where critical point is P$_1$=$\sqrt{p*}$,p$_{1}'$ and p$_{1}''$ can be obtained by solving the equation:
+\begin{equation} \label{eq:3.7}
+\begin{split}
+p_{1}^{N}(p_{1}-p*)^{N}(PR_{d}p_{1}-p*)+p*^{N+1}(1-p_{1})^{N}(p_{1}-PR_{d})=0 \quad 0<p_{1}<1
+\end{split}
+\end{equation}
+ To minimize energy consumption while satisfying production rate constraint, the author compare the energy critical point with the production rate critical point PR and interval[p1$_{1}'$, p1$_{1}''$].
+Researches have been done about the exact analysis for small systems, and the aggregation approach for medium size systems and Heuristic method for large systems\cite{Su2017}.
+ 
+ 
+\subsection{Local bench marking of manufacturing lines}
+
+Benchmarking is an important step towards forecasting energy use of prospective production lines as well as managing its use in existing lines and setting targets for reducing it. Global benchmarking in energy use can be defined as comparing energy consumption of different equipment at different plants to obtain generic ideal energy use benchmark targets as function of different operating conditions/parameters (i.e. temperature, process plans, schedules, utilization, etc.) as well as equipment characteristics (i.e.age, technology, etc.). Obtaining this extensive information is not always feasible given limited resources, measuring devices, time and information in different plants. Local energy use benchmarking sets local targets within a specific plant or manufacturing system.This has a direct impact on the evaluation of energy use efficiencies and improvement targets in many scenarios where drastic changes to current technology or manufacturing setup are not possible.The overall method of local benchmarking for energy use is composed of six steps in Figure \ref{fig:local-benchmarking}\cite{ElMaraghy2017}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Figure/local-benchmarking.jpg}
+	\caption{local benchmarking}
+	\label{fig:local-benchmarking}
+\end{figure}
+
+\subsection{Utilization of energy flows}
+
+Thermoelectric materials are solid-state electrical, and semiconducting properties electricity or electrical power directly with fluid-based systems, such as two-used in smaller-scale applications such electrical-enclosure cooling. More widespread the intrinsic energy-conversion efficiency advancements in system architecture. In a working TE device, segments of p-type- and n-type-doped semiconductor materials, such as suitably doped bismuth telluride, are connected by shunts to form an electric circuit. The shunts are made of an excellent electrical conductor, such as copper. A voltage drives a current through the circuit, passing from one segment to another through the connecting shunts. For determining efficiency, this configuration is equivalent to the electrons passing directly from one TE material to the other. Conventional TE cooling/heating modules are constructed of pairs of TE segments, repeated about 100 times, and organized into ar rays like the one shown in Figure \ref{fig:Thermoelectric materials}\cite{Bell2008}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Figure/Thermoelectric-materials.png}
+	\caption{Thermoelectric materials}
+	\label{fig:Thermoelectric materials}
+\end{figure}
