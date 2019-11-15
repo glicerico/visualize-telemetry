@@ -4,7 +4,7 @@
 
 A crucial part of the proposed pipeline is to represent the obtained raw telemetry data in a way that abstracts the state of the network, distiniguishing clearly when it is in an anomalous state.
 Deep neural networks have been used for non-dynamical graphs \cite{venkatakrishnan_graph2seq_2018}, where the structure of the graph is converted to a continous vector for each timestep.
-We need a DNN that can also process the dynamical behaviour of our data into the graph.
+We need a DNN that can also process the dynamical behavior of our data into the graph.
 
 Another possibility is to use the telemetry data directly, in a fashion similar to Putina et al.\cite{putina_telemetry-based_2018} to feed their clustering algorithm.
 However, what is important in our case is that the representations used can distinguished between normal and anomalous network operation.
@@ -71,7 +71,7 @@ Using data from a different experiment, figure \ref{fig:portflap_first_leaf1_DP}
 	\label{fig:portflap_first_leaf1_DP}
 \end{figure}
 
-This is an interesting result, which shows that it's feasible to subdivide the high-dimensional space in which the given representations exist, and know where the normal behaviour of the network lies.
+This is an interesting result, which shows that it's feasible to subdivide the high-dimensional space in which the given representations exist, and know where the normal behavior of the network lies.
 Additionaly, this can be done without having an expert pre-select the features to use, as done by Putina et al\cite{putina_telemetry-based_2018}.
 This subdivision of the space will allow to construct the sequence of tokens that would be processed by the Unsupervised Language Learning pipeline to obtain the network's grammar.
 
