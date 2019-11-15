@@ -1,7 +1,6 @@
 {
 	"nodes":[
-		"leaf1","leaf2","leaf3",
-		"spine1","spine2","spine3","spine4"
+		"leaf1"
 	],
 	"featureModel":"DataPlane",
 	"featureList": [
@@ -34,7 +33,7 @@
 			"bgpclearNewNet"
 		],
 		"list":[
-			"bgpclear_first"
+			"portflap_first"
 		],
 		"path": "Data/DatasetByNodes/"
 	}
