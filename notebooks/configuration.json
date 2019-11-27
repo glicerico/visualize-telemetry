@@ -3,7 +3,7 @@
 		"leaf1", "leaf2", "leaf3", "leaf5", "leaf6", "leaf7", "leaf8",
 		"spine1", "spine2", "spine3", "spine4"
 	],
-	"featureModel":"DataPlane",
+	"featureModel":"ControlPlane",
 	"featureList": [
 		"active-routes-count",
 		"as",
