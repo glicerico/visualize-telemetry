@@ -30,11 +30,10 @@
 			"bgpclear_second",
 			"portflap_first",
 			"bgpclear_apptraffic_2hourRun",
-			"bgpclear_no_traffic_2hourRun",
-			"bgpclearNewNet"
+			"bgpclear_no_traffic_2hourRun"
 		],
 		"list":[
-			"bgpclear_first"
+			"bgpclear_no_traffic_2hourRun"
 		],
 		"path": "Data/DatasetByNodes/"
 	}
