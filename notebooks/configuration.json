@@ -33,7 +33,7 @@
 			"bgpclear_no_traffic_2hourRun"
 		],
 		"list":[
-			"bgpclear_no_traffic_2hourRun"
+			"bgpclear_second"
 		],
 		"path": "Data/DatasetByNodes/"
 	}
